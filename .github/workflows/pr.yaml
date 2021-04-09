@@ -48,4 +48,4 @@ jobs:
             source .envrc
             pytest  --cov-report xml
             git fetch --all
-            diff-cover ./coverage.xml --compare-branch=origin/main --fail-under=95
+            diff-cover ./coverage.xml --compare-branch=origin/main --fail-under=${{ secrets.COVERAGE_PERCENT }}
